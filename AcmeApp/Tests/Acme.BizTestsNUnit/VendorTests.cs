@@ -1,17 +1,11 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Acme.Biz;
+﻿using NUnit.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Acme.Biz.Tests
+namespace Acme.BizTestsNUnit
 {
-    [TestClass()]
+    [TestFixture()]
     public class VendorTests
     {
-        [TestMethod()]
+        [Test()]
         public void SendWelcomeEmail_ValidCompany_Success()
         {
             // Arrange
@@ -26,7 +20,7 @@ namespace Acme.Biz.Tests
             Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod()]
+        [Test()]
         public void SendWelcomeEmail_EmptyCompany_Success()
         {
             // Arrange
@@ -41,7 +35,7 @@ namespace Acme.Biz.Tests
             Assert.AreEqual(expected, actual);
         }
 
-        [TestMethod()]
+        [Test()]
         public void SendWelcomeEmail_NullCompany_Success()
         {
             // Arrange
