@@ -1,17 +1,12 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Acme.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using NUnit.Framework;
 
-namespace Acme.Common.Tests
+namespace Acme.CommonTestsNUnit
 {
-    [TestClass()]
+    [TestFixture()]
     public class LoggingServiceTests
     {
-        [TestMethod()]
+        [Test()]
         public void LogAction_Success()
         {
             // Arrange

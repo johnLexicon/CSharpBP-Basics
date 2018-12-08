@@ -1,11 +1,11 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace Acme.Common.Tests
+﻿using NUnit.Framework;
+using System;
+namespace Acme.CommonTestsNUnit
 {
-    [TestClass()]
+    [TestFixture()]
     public class EmailServiceTests
     {
-        [TestMethod()]
+        [Test()]
         public void SendMessage_Success()
         {
             // Arrange
