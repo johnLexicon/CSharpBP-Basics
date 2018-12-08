@@ -1,5 +1,7 @@
-﻿using NUnit.Framework;
+﻿using Acme.Biz;
+using NUnit.Framework;
 using System;
+
 namespace Acme.BizTestsNUnit
 {
     [TestFixture()]

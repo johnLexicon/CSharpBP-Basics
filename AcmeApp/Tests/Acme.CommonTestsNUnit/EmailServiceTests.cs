@@ -1,5 +1,7 @@
-﻿using NUnit.Framework;
+﻿using Acme.Common;
+using NUnit.Framework;
 using System;
+
 namespace Acme.CommonTestsNUnit
 {
     [TestFixture()]
