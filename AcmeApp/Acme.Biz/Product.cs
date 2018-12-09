@@ -33,7 +33,7 @@ namespace Acme.Biz
             }
         }
 
-        public string ProductName { 
+        internal string ProductName { 
             get => productName?.Trim();
             set 
             { 
@@ -52,10 +52,10 @@ namespace Acme.Biz
             } 
         }
 
-        public string Description { get => description; set => description = value; }
-        public int? ProductId { get => productId; set => productId = value; }
+        internal string Description { get => description; set => description = value; }
+        internal int? ProductId { get => productId; set => productId = value; }
 
-        public Vendor ProductVendor { 
+        internal Vendor ProductVendor { 
             get {
                 //Lazy loading example (instantiate the object when needed)
                 if(productVendor is null)
@@ -67,7 +67,10 @@ namespace Acme.Biz
             set => productVendor = value;
           }
 
-        public string ValidationMessage { get; private set; }
+        internal string ValidationMessage { get; private set; }
+
+        internal string Category { get; set; } = "Tools";
+        internal int SequenceNumber { get; set; } = 1;
 
         public string SayHello()
         {

@@ -148,5 +148,20 @@ namespace Acme.BizTestsNUnit
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [Test()]
+        public void ProductCategory_ChangeValue_Test()
+        {
+            //Arrange
+            Product p = new Product();
+            p.Category = "Spices";
+            string expected = "Spices";
+
+            //Act
+            string actual = p.Category;
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

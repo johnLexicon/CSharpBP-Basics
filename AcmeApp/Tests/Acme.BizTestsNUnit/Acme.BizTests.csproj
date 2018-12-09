@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{813D96D3-A163-428E-B963-9E7B9F86BB78}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Acme.BizTestsNUnit</RootNamespace>
+    <RootNamespace>Acme.BizTests</RootNamespace>
     <AssemblyName>Acme.BizTestsNUnit</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
   </PropertyGroup>
