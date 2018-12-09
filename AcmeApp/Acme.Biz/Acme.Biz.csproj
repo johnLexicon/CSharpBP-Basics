@@ -43,6 +43,7 @@
     <Compile Include="Vendor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VendorRepository.cs" />
+    <Compile Include="Product.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Acme.Common\Acme.Common.csproj">

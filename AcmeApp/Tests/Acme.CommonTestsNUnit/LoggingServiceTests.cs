@@ -1,4 +1,5 @@
 ﻿using System;
+using Acme.Common;
 using NUnit.Framework;
 
 namespace Acme.CommonTestsNUnit
