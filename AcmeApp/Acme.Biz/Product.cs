@@ -9,15 +9,15 @@ namespace Acme.Biz
 
         private string productName;
         private string description;
-        private int productId;
+        private int? productId;
 
         public string ProductName { get => productName; set => productName = value; }
         public string Description { get => description; set => description = value; }
-        public int ProductId { get => productId; set => productId = value; }
+        public int? ProductId { get => productId; set => productId = value; }
 
         public string SayHello()
         {
-            return $"Hello {ProductId} {ProductName} {Description}";
+            return $"Hello {ProductId} {ProductName} {Description}".Trim();
         }
     }
 }
