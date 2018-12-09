@@ -112,6 +112,41 @@ namespace Acme.BizTestsNUnit
 
             //Assert
             Assert.AreEqual(expected, actual);
+            Assert.IsNull(p.ValidationMessage);
+        }
+
+        [Test()]
+        public void ProductName_TooShort_Test()
+        {
+            //Arrange
+            Product p = new Product
+            {
+                ProductName = "ab"
+            };
+            string expected = "Product name too short";
+
+            //Act
+            string actual = p.ValidationMessage;
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test()]
+        public void ProductName_TooLong_Test()
+        {
+            //Arrange
+            Product p = new Product
+            {
+                ProductName = "abcdefghijklmnopqrstu" //21 characters long
+            };
+            string expected = "Product name too long";
+
+            //Act
+            string actual = p.ValidationMessage;
+
+            //Assert
+            Assert.AreEqual(expected, actual);
         }
     }
 }
