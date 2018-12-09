@@ -53,5 +53,48 @@ namespace Acme.BizTestsNUnit
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [Test()]
+        public void Product_NULL_Test()
+        {
+            //Arrange
+            Product p = null;
+            string companyName = p?.ProductVendor?.CompanyName;
+            string expected = null;
+
+            //Act
+            var actual = companyName;
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test()]
+        public void MinimumPrice_Test()
+        {
+            //Arrange
+            Product p = new Product();
+            decimal expected = .99m;
+
+            //Act
+            decimal actual = p.MinimumPrice;
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test()]
+        public void MinimumPrice_BulkProduct_Test()
+        {
+            //Arrange
+            Product p = new Product(1, "Bulk", "My description");
+            decimal expected = 9.99m;
+
+            //Act
+            decimal actual = p.MinimumPrice;
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
