@@ -33,9 +33,28 @@ namespace Acme.Biz
             }
         }
 
-        public string ProductName { get => productName?.Trim(); set => productName = value; }
+        public string ProductName { 
+            get => productName?.Trim();
+            set 
+            { 
+                if(value.Length < 3)
+                {
+                    ValidationMessage = "Product name too short";
+                }
+                else if(value.Length > 20)
+                {
+                    ValidationMessage = "Product name too long";
+                }
+                else
+                {
+                    productName = value;
+                }
+            } 
+        }
+
         public string Description { get => description; set => description = value; }
         public int? ProductId { get => productId; set => productId = value; }
+
         public Vendor ProductVendor { 
             get {
                 //Lazy loading example (instantiate the object when needed)
@@ -45,8 +64,10 @@ namespace Acme.Biz
                 }
                 return productVendor;
           } 
-            set => productVendor = value; 
+            set => productVendor = value;
           }
+
+        public string ValidationMessage { get; private set; }
 
         public string SayHello()
         {
