@@ -96,5 +96,22 @@ namespace Acme.BizTestsNUnit
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [Test()]
+        public void ProductName_Test()
+        {
+            //Arrange
+            Product p = new Product
+            {
+                ProductName = "    Table    "
+            };
+            string expected = "Table";
+
+            //Act
+            string actual = p.ProductName;
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
