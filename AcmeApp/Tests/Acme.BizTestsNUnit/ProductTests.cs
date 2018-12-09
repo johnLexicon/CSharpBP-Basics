@@ -39,5 +39,19 @@ namespace Acme.BizTestsNUnit
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [Test()]
+        public void SayHello_Parametized_Test()
+        {
+            //Arrange
+            var p = new Product(2, "Screw driver", "Star headed screw driver size 5.");
+            string expected = "Hello 2 Screw driver Star headed screw driver size 5.";
+
+            //Act
+            string actual = p.SayHello();
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
