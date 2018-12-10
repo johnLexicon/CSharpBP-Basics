@@ -14,7 +14,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 //Added to be able to use access internal declarations from the BizTestsNUnit namespace.
-[assembly: InternalsVisibleTo("Acme.BizTestsNUnit")]
+[assembly: InternalsVisibleTo("Acme.BizTests")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 

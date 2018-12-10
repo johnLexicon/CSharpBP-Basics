@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using System;
 
-namespace Acme.BizTestsBizTestsNUnit
+namespace Acme.BizTests
 {
     [TestFixture()]
     public class VendorTests
@@ -68,7 +68,6 @@ namespace Acme.BizTestsBizTestsNUnit
         }
 
         [Test()]
-        [ExpectedException(typeof(ArgumentNullException))]
         public void PlaceOrder_NullProduct_Test()
         {
             //Arrange
@@ -76,14 +75,19 @@ namespace Acme.BizTestsBizTestsNUnit
             Product product = null;
 
             //Act
-            var act = vendor.PlaceOrder(product, 4);
+            try
+            {
+                var act = vendor.PlaceOrder(product, 4);
+            }
+            catch (ArgumentNullException)
+            {
+                return;
+            }
 
-            //Assert
-            //Expected exception
+            Assert.Fail();
         }
 
         [Test()]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void PlaceOrder_QuantityLessThanOne_Test()
         {
             //Arrange
@@ -96,10 +100,16 @@ namespace Acme.BizTestsBizTestsNUnit
             };
 
             //Act
-            var act = vendor.PlaceOrder(product, 0);
+            try
+            {
+                var act = vendor.PlaceOrder(product, 0);
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                return;
+            }
 
-            //Assert
-            //Expected exception
+            Assert.Fail();
         }
     }
 }

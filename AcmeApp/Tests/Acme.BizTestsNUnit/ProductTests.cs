@@ -2,7 +2,7 @@
 using Acme.Biz;
 using NUnit.Framework;
 
-namespace Acme.BizTestsNUnit
+namespace Acme.BizTests
 {
     [TestFixture()]
     public class ProductTests
